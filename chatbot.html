@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>College Chatbot</title>
+
+<style>
+body{
+font-family:Arial;
+background:#ece5dd;
+text-align:center;
+}
+
+.chatbox{
+width:350px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+}
+
+.bot{
+background:#dcf8c6;
+padding:10px;
+margin-top:10px;
+border-radius:5px;
+}
+</style>
+
+<script>
+
+function reply(){
+
+var q=document.getElementById("q").value.toLowerCase();
+var ans="Sorry I don't understand";
+
+if(q.includes("hi") || q.includes("hello")){
+ans="Hello! Welcome to Sri Raaja Raajan College of Engineering and Technology";
+}
+
+else if(q.includes("courses")){
+ans="Our college offers CSE, ECE, EEE, MECH, CIVIL";
+}
+
+else if(q.includes("fees")){
+ans="Average course fee is 80000 per year";
+}
+
+else if(q.includes("hostel")){
+ans="Hostel facility available";
+}
+
+else if(q.includes("placement")){
+ans="Good placement support available";
+}
+
+document.getElementById("a").innerHTML=ans;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Sri Raaja Raajan College of Engineering and Technology</h2>
+
+<div class="chatbox">
+
+<input id="q" type="text" placeholder="Ask question">
+
+<button onclick="reply()">Send</button>
+
+<div class="bot" id="a"></div>
+
+</div>
+
+</body>
+</html>
